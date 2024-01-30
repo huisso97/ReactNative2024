@@ -1,6 +1,5 @@
-import { Button, StyleSheet, TextInput, View } from "react-native";
-import { Input } from "../types";
 import { useState } from "react";
+import { Button, StyleSheet, TextInput, View } from "react-native";
 
 const GoalInput = ({
   onAddGoal,
