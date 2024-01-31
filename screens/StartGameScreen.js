@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     marginTop: 100,
     padding: 6,
     marginHorizontal: 24,
-    backgroundColor: "#4e0329",
+    backgroundColor: "#3b021f",
     borderRadius: 8,
     elevation: 4,
     // 안드로이드에서만 적용되는 속성
