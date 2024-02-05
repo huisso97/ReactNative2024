@@ -13,9 +13,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+<<<<<<<< HEAD:section04/app.json
     "updates": {
       "fallbackToCacheTimeout": 0
     },
+========
+>>>>>>>> section6:section06/app.json
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
