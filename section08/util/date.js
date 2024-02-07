@@ -1,6 +1,4 @@
 const getFormattedDate = (date) => {
-  console.log(">>>>>date", date);
-
   return new Date(date).toISOString().slice(0, 10);
 };
 

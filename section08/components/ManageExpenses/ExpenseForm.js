@@ -11,7 +11,6 @@ const ExpenseForm = ({
   onSubmit,
   defaultValues,
 }) => {
-  console.log(">>>>defaultValu`es", defaultValues);
   const [inputs, setInputs] = useState({
     amount: {
       value: defaultValues ? defaultValues.amount.toString() : "",
@@ -28,7 +27,6 @@ const ExpenseForm = ({
   });
 
   const handleInputValues = (type, value) => {
-    console.log("test", value);
     setInputs((curInputs) => {
       return {
         ...curInputs,

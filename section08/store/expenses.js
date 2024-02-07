@@ -13,7 +13,6 @@ const useExpenses = create(
         }),
       setExpense: (payload) =>
         set((state) => {
-          console.log(">>>>state", state, payload);
           return {
             expenses: payload.reverse(),
           };

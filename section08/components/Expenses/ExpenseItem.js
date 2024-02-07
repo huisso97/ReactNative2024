@@ -5,7 +5,6 @@ import { GlobalStyles } from "../../constants/styles";
 import { getFormattedDate } from "../../util/date";
 
 const ExpenseItem = ({ id, description, amount, date }) => {
-  console.log(">>>>amount", typeof amount);
   const navigation = useNavigation();
 
   const handleExpensePress = () => {

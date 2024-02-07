@@ -29,4 +29,12 @@ const fetchExpense = async () => {
   return expenses;
 };
 
-export { fetchExpense, storeExpense };
+const updateExpense = async (id, expenseData) => {
+  return axios.put(BACKEND_URL + `/expense/${id}.json`, expenseData);
+};
+
+const deleteExpense = (id) => {
+  return axios.delete(BACKEND_URL + `/expense/${id}.json`);
+};
+
+export { fetchExpense, storeExpense, updateExpense, deleteExpense };
