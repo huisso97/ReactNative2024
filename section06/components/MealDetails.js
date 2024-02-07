@@ -7,7 +7,6 @@ const MealDetails = ({
   style,
   textStyle,
 }) => {
-  console.log(duration, complexity, affordability);
   return (
     <View style={[styles.details, style]}>
       <Text style={[styles.detailItem, textStyle]}>{duration}m</Text>

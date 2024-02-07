@@ -18,9 +18,7 @@ const MealDetailScreen = ({ route, navigation }) => {
 
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
-  const handleHeaderButtonPress = () => {
-    console.log("pressed!");
-  };
+  const handleHeaderButtonPress = () => {};
 
   // 헤더에 버튼 추가
   useLayoutEffect(() => {

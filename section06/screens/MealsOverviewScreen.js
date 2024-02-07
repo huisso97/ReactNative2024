@@ -28,7 +28,7 @@ const MealsOverviewScreen = ({ route, navigation }) => {
 
   const renderMealItem = (itemData) => {
     const item = itemData.item;
-    console.log(">>>item", item);
+
     const mealItemProps = {
       id: item.id,
       title: item.title,
