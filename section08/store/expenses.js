@@ -11,6 +11,13 @@ const useExpenses = create(
           const id = new Date().toString() + Math.random().toString();
           return { expenses: [{ id: id, ...payload }, ...state.expenses] };
         }),
+      setExpense: (payload) =>
+        set((state) => {
+          console.log(">>>>state", state, payload);
+          return {
+            expenses: payload.reverse(),
+          };
+        }),
       deleteExpense: (payload) =>
         set((state) => {
           return {

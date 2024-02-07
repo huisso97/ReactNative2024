@@ -1,7 +1,7 @@
 const getFormattedDate = (date) => {
   console.log(">>>>>date", date);
 
-  return date.toString().slice(0, 10);
+  return new Date(date).toISOString().slice(0, 10);
 };
 
 const getDateMinusDays = (date, days) => {
