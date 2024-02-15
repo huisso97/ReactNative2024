@@ -15,7 +15,7 @@ import {
   useRoute,
 } from "@react-navigation/native";
 
-const LocationPicker = () => {
+const LocationPicker = ({ onPickLocation }) => {
   const [pickedLocation, setPickedLocation] = useState();
   // 현재 컴포넌트를 유저가 보고 있는지 여부 판단하는 훅
   const isFocused = useIsFocused();
@@ -57,6 +57,10 @@ const LocationPicker = () => {
       lat: location.coords.latitude,
       lng: location.coords.longitude,
     });
+    onPickLocation({
+      lat: location.coords.latitude,
+      lng: location.coords.longitude,
+    });
   };
   const handlePickonMap = () => {
     navigation.navigate("Map");
@@ -85,6 +89,10 @@ const LocationPicker = () => {
       setPickedLocation(mapPickedLocation);
     }
   }, [route]);
+
+  useEffect(() => {
+    onPickLocation(pickedLocation);
+  }, [pickedLocation, onPickLocation]);
   return (
     <View>
       <View style={styles.mapPreview}>{locationPreview}</View>
