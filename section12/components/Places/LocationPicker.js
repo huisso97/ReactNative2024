@@ -8,7 +8,7 @@ import {
 import OutlinedButton from "../UI/OutlinedButton";
 import { Colors } from "../../constants/colors";
 import { useEffect, useState } from "react";
-import { getMapPreview } from "../../util/location";
+import { getAddress, getMapPreview } from "../../util/location";
 import {
   useIsFocused,
   useNavigation,
@@ -91,7 +91,17 @@ const LocationPicker = ({ onPickLocation }) => {
   }, [route]);
 
   useEffect(() => {
-    onPickLocation(pickedLocation);
+    const handleLocation = async () => {
+      if (pickedLocation) {
+        const address = await getAddress(
+          pickedLocation.lat,
+          pickedLocation.lng
+        );
+        onPickLocation({ ...pickedLocation, address: address });
+      }
+    };
+
+    handleLocation();
   }, [pickedLocation, onPickLocation]);
   return (
     <View>
